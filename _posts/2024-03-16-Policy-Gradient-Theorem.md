@@ -28,7 +28,7 @@ MathJax = {
  $$V^{\pi}(s) = \mathbb{E}_{\tau \sim Pr^\pi(\tau|s_o=s)}\left[\sum_{t=0}^{\infty}\gamma^tr(s_t,a_t)\right]$$<br>
  using $\nabla_{\theta} V^{\pi_\theta}(s)$<br><br>
  ($\tau$ is a sample trajectory when following policy $\pi$)<br><br>
- Performance difference between policies is<br>
+ Performance difference between policies can be defined as<br>
  $$V^{\pi}(s) - V^{\pi'}(s) = \mathbb{E}_{\tau \sim Pr^\pi(\tau|s_o=s)}{\Large[}\sum_{t=0}^{\infty}\gamma^tr(s_t,a_t){\Large]} - V^{\pi'}(s)$$<br>
  $$= \mathbb{E}_{\tau \sim Pr^\pi(\tau|s_o=s)}\left[\sum_{t=0}^{\infty}\gamma^t{\Large(}r(s_t,a_t) + V^{\pi'}(s_t) - V^{\pi'}(s_t){\Large)}\right] - V^{\pi'}(s)$$<br>
  $$= \mathbb{E}_{\tau \sim Pr^\pi(\tau|s_o=s)}\left[\sum_{t=0}^{\infty}\gamma^t{\Large(}r(s_t,a_t) + \gamma V^{\pi'}(s_{t+1}) - V^{\pi'}(s_t){\Large)}\right]$$<br>
