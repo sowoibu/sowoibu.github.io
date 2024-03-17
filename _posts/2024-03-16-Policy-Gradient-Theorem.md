@@ -17,10 +17,15 @@ MathJax = {
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
+<style>
+mjx-container { overflow-x: auto; overflow-y: hidden;
+display: inline-grid;
+}
+</style>
 </head>
 
 
-**<span style="color:orange;font-size:200%">Policy Gradient Theorem for discounted Episodic case</span>**
+# **<span style="color:orange;font-size:150%">Policy Gradient Theorem for discounted Episodic case</span>**
 
 ## Instead of learning value functions and using it to action selection (e.g. $\epsilon$ greedy) we can learn parameterized policy and select action without consulting value function.<br>
 ## Policy gradient theorem is the fundamental theorem which makes possible to learn parameterized policy.<br><br>
