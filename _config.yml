@@ -14,3 +14,14 @@ plugins:
   - jekyll-paginate
 
 # Custom vars
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Social Info
+navigation: False
+
+
