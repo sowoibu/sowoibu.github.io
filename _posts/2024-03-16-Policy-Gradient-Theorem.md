@@ -11,11 +11,11 @@ summary: Policy Gradient Theorem for discounted reward setting.
 <h1 style = "color:#d28445;font-weight:bold">
 Policy Gradient Theorem for discounted Episodic case
 </h1>
-
-<main class="content container">
+<br>
+<main class = "content">
 Instead of learning value functions and using it to action selection (e.g. $ \epsilon$ greedy) we can learn parameterized policy and select action without consulting value function. Policy gradient theorem is the fundamental theorem which makes possible to learn parameterized policy.
 
-Here we consider episodic, discounted case with initial state s.<br> We want to learn policy that maximizess
+Here we consider episodic, discounted case with initial state s.<br><br> We want to learn policy that maximizes
 
 $$\begin{array}{l}
  V^{\pi}(s) = \mathbb{E}_{\tau \sim Pr^\pi(\tau|s_o=s)}\left[\sum_{t=0}^{\infty}\gamma^tr(s_t,a_t)\right] 
@@ -24,7 +24,7 @@ $$\begin{array}{l}
 using $\nabla_{\theta} V^{\pi_\theta}(s)$
 <br>
 ($\tau$ is a sample trajectory when following policy $\pi$)
-<br><br>
+<br><br><br>
 Performance difference between policies can be defined as
 
 $$\begin{array}{l}
@@ -35,7 +35,7 @@ V^{\pi}(s) - V^{\pi'}(s) = \mathbb{E}_{\tau \sim Pr^\pi(\tau|s_o=s)}{\Large[}\su
 = \mathbb{E}_{\tau \sim Pr^\pi(\tau|s_o=s)}\left[\sum_{t=0}^{\infty}\gamma^t{\Large(}r(s_t,a_t) + \gamma \mathbb{E}[V^{\pi'}(s_{t+1})|s_t,a_t] - V^{\pi'}(s_t){\Large)}\right]\\
 = \mathbb{E}_{\tau \sim Pr^\pi(\tau|s_o=s)}\left[\sum_{t=0}^{\infty}\gamma^t{\Large(} Q^{\pi'}(s_t,a_t) - V^{\pi'}(s_t){\Large)}\right]
 \end{array}$$
-
+<br>
 <p>
 Now, consider $ Pr^\pi(s_t=s'|s_0=s) $: probability of reaching state $s'$ in time $t$ starting at state $s$.
 </p>
@@ -67,11 +67,15 @@ $$\begin{array}{l}
 =\frac{1}{1-\gamma}\mathbb{E}_{s'\sim d_s^{\pi_\theta}}\mathbb{E}_{a\sim \pi_\theta(a|s')}\nabla_\theta \log {\pi_\theta(a|s')} Q^{\pi_\theta}(s',a)
 \end{array}$$
 
-We can generalize this result to arbitrary initial state distribution $s \sim \mu(s)$
+We can generalize this result to arbitrary initial state distribution $s \sim \mu(s)$.
 
-Hence it can be written as
+Hence<br><br>
 
-$$\nabla_\theta J(\theta)=\frac{1}{1-\gamma}\mathbb{E}_{s'\sim d_\mu^{\pi_\theta}}\mathbb{E}_{a\sim \pi_\theta(a|s')}\nabla_\theta \log {\pi_\theta(a|s')} Q^{\pi_\theta}(s',a)$$
+$\begin{array}{l}
+\nabla_\theta J(\theta)=(1-\gamma)\mathbb{E}_{s\sim \mu(s)}\nabla_\theta V^{\pi_\theta}(s)
+=\mathbb{E}_{s'\sim d_\mu^{\pi_\theta}}\mathbb{E}_{a\sim \pi_\theta(a|s')}\nabla_\theta \log {\pi_\theta(a|s')} Q^{\pi_\theta}(s',a)
+\end{array}$
+<br>
 
 where $J(\theta)$ is a policy performance function of policy parameter $\theta$. 
 </main>
