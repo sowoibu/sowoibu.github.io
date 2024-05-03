@@ -12,4 +12,5 @@ Summary of Trust Region Policy Optimization
 <h1 style = "font-weight:bold;">
 Vanilla Policy Gradient   
 </h1>
-
+<br>
+From policy gradient theorem, policy gradient can be defined as
