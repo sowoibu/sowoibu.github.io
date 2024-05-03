@@ -10,6 +10,6 @@ Summary of Trust Region Policy Optimization
 </h1>
 <br>
 <h1 style = "font-weight:bold;">
-Vanilla Policy Gradient
+Vanilla Policy Gradient   
 </h1>
 
