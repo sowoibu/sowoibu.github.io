@@ -8,7 +8,7 @@ summary: Policy Gradient Theorem for discounted reward setting.
 
 </head>
 
-<h1 style = "color:#d28445;font-weight:bold">
+<h1>
 Policy Gradient Theorem for discounted Episodic case
 </h1>
 <br>

@@ -6,9 +6,9 @@ summary: TRPO aims steady improvement of policy.
 ---
 <head>
 </head>
-<h1 style = "color:#d28445;font-weight:bold">
+
 Summary of Trust Region Policy Optimization
-</h1>
+
 <h1>
 Vanilla Policy Gradient   
 </h1>
@@ -164,7 +164,7 @@ then $$L_{\theta_{old}}(\theta) \approx g(\theta-\theta_{old})$$
 
 Then the search direction is $$s = A^{-1}g\,$$ and the step size should be the maximum value that satisfies the KL-divergence constraint.
 
-Measuring fisher information matrix and calculating inverse of it is not easy. Thus Trust Region Policy Optimization is known to be computationally expensive.
+Measuring fisher information matrix and Calculating inverse of it is not easy. Thus Trust Region Policy Optimization is known to be computationally expensive.
 
 
 
