@@ -5,6 +5,9 @@ url:                 https://sowoibu.github.io
 baseurl:             ''
 paginate:            5
 permalink:           pretty
+google_site_verification : DEfAPAlWoNGCY0FXF1I34YjjqJFlyUhl9WH9nQ7TQ1A
+
+
 
 # About/contact
 
@@ -24,5 +27,4 @@ incremental: false
 # Social Info
 navigation: False
 
-# SEO Related
-google_site_verification: DEfAPAlWoNGCY0FXF1I34YjjqJFlyUhl9WH9nQ7TQ1A
+
