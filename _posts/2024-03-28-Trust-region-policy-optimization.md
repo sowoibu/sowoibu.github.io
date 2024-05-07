@@ -7,23 +7,27 @@ summary: TRPO aims steady improvement of policy.
 <head>
 </head>
 
-Summary of Trust Region Policy Optimization
+Summary of Trust Region Policy Optimization.
 
 <h1>
 Vanilla Policy Gradient   
 </h1>
+<br>
 From policy gradient theorem, policy gradient is defined as 
 
 $$\begin{array}{l}
 \nabla_\theta J(\theta)=\mathbb{E}_{s'\sim d_\mu^{\pi_\theta}}\mathbb{E}_{a\sim \pi_\theta(a|s')}\nabla_\theta \log {\pi_\theta(a|s')} Q^{\pi_\theta}(s',a)
 \end{array}$$
 <br>
-Policy gradient provides local estimator of	the gradient of the expected reward. However, large step of update using policy gradient often results in policy collapse.
-TRPO is a method that maintains stability and prevent policy collapse.
+Policy gradient provides local estimator of	the gradient of the expected reward. However, large step of updates using policy gradient often results in policy collapse.
+TRPO is a method that maintains stability while optimizing policies.
+<br><br><br>
+
 
 <h1>
 Trust Region Policy Optimization
 </h1>
+<br>
 In TRPO, what we want is a continuous improvement of policy. The monotonic improvement of policy is guaranteed by setting Trust Region based on current policy.
 
 Let's start with the policy difference mentioned in last post.
@@ -125,8 +129,11 @@ $$maximize_\theta \; L_{\theta_{old}}(\theta)$$
 
 $$subject\,to\; \overline{D}_{KL}^{\rho_{\theta_{old}}}(\theta_{old},\theta) \le \delta $$
 
-<h1>Practical Implementation</h1>
+<br><br><br>
 
+
+<h1>Practical Implementation</h1>
+<br>
 So what we want to mazimize is
 
 $$ maximize_{\theta} \; \sum_s\rho_{\theta_{old}}(s)\sum_a\pi_\theta(a|s)A_{\theta_{old}}(s,a) $$
@@ -162,9 +169,9 @@ Let,
 $$ g \,=\, \nabla_\theta(L_{\theta_{old}})|_{\theta=\theta_{old}} $$
 then $$L_{\theta_{old}}(\theta) \approx g(\theta-\theta_{old})$$
 
-Then the search direction is $$s = A^{-1}g\,$$ and the step size should be the maximum value that satisfies the KL-divergence constraint.
+Then the search direction is $$s = A^{-1}g\,$$ and the step size should be the maximum value that satisfies the KL-divergence constraint and improves surrogate objective function.
 
-Measuring fisher information matrix and Calculating inverse of it is not easy. Thus Trust Region Policy Optimization is known to be computationally expensive.
+Measuring fisher information matrix and Calculating its inverse is not easy. Thus Trust Region Policy Optimization is known to be computationally expensive.
 
 
 
