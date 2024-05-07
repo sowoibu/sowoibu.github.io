@@ -1,7 +1,7 @@
 # Setup
 title:               Uooh's blog
 tagline:             ''
-url:                 https://sowoibu.github.io
+url:                 'https://sowoibu.github.io'
 baseurl:             ''
 paginate:            5
 permalink:           pretty
