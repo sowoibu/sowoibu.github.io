@@ -178,5 +178,5 @@ Measuring fisher information matrix and Calculating its inverse is not easy. Thu
 
 <h1>References</h1>
 Trust Region Policy Optimization, Schulman et al. 2015
-<a href="https://arxiv.org/abs/1502.05477">https://arxiv.org/abs/1502.05477</a>
+<a href="https://arxiv.org/abs/1502.05477" target="_blank">https://arxiv.org/abs/1502.05477</a>
 
