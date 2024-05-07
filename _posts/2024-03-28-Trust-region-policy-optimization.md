@@ -174,5 +174,9 @@ Then the search direction is $$s = A^{-1}g\,$$ and the step size should be the m
 Measuring fisher information matrix and Calculating its inverse is not easy. Thus Trust Region Policy Optimization is known to be computationally expensive.
 
 
+<br><br>
 
+<h1>References</h1>
+Trust Region Policy Optimization, Schulman et al. 2015
+<a href="https://arxiv.org/abs/1502.05477">https://arxiv.org/abs/1502.05477</a>
 
